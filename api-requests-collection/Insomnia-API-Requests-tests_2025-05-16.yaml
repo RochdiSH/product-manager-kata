@@ -1,0 +1,319 @@
+type: collection.insomnia.rest/5.0
+name: Scratch Pad
+meta:
+  id: wrk_scratchpad
+  created: 1707141498757
+  modified: 1707141498757
+collection:
+  - name: product-manager-kata
+    meta:
+      id: fld_2215fe9062134ab6b0a33e66808cde46
+      created: 1747355896975
+      modified: 1747355896975
+      sortKey: -1747355896975
+    children:
+      - url: http://localhost:8080/account
+        name: Create account
+        meta:
+          id: req_f95db861e37e457791416655afba3a2e
+          created: 1747350289125
+          modified: 1747355937071
+          isPrivate: false
+          sortKey: -1747355907869
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "username": "admin",
+              "firstname": "Admin",
+              "email": "admin@admin.com",
+              "password": "admin123"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+            id: pair_9da2616e938f46e284f6943a67336e43
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJpYXQiOjE3NDczNTA3OTEsImV4cCI6MTc0NzQzNzE5MX0.doPyRDnO4PwEo0njSOQzQiRhxLNM-dbr-hnbGDe0w18
+          disabled: true
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/token
+        name: Get token
+        meta:
+          id: req_fa8eb96d4adb45bb9cfa3afbb8c94840
+          created: 1747351575191
+          modified: 1747355964175
+          isPrivate: false
+          sortKey: -1747355907969
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "email": "admin@admin.com",
+              "password": "admin123"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+            id: pair_9da2616e938f46e284f6943a67336e43
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJpYXQiOjE3NDczNTA3OTEsImV4cCI6MTc0NzQzNzE5MX0.doPyRDnO4PwEo0njSOQzQiRhxLNM-dbr-hnbGDe0w18
+          disabled: true
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/products
+        name: Add product
+        meta:
+          id: req_1b7707d5367f48ea986195eebf7cdbb3
+          created: 1747351610360
+          modified: 1747356733226
+          isPrivate: false
+          sortKey: -1747355908069
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            
+            {
+              "code": "666",
+              "name": "Ordinateur portable",
+              "description": "MacBook M1",
+              "image": "macbook.jpg",
+              "category": "Informatique",
+              "price": 999.99,
+              "quantity": 10,
+              "internalReference": "REF-MAC-01",
+              "shellId": 1,
+              "inventoryStatus": "INSTOCK",
+              "rating": 5
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+            id: pair_9da2616e938f46e284f6943a67336e43
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJpYXQiOjE3NDczNTYxNTMsImV4cCI6MTc0NzQ0MjU1M30.gP3dskBbCjxVdhtOm0Z-12V38j53W6zLPNmlA1gS1P8
+          disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/products
+        name: Get all products
+        meta:
+          id: req_7fdb00711c344f508ed637cc0dcb6424
+          created: 1747353530452
+          modified: 1747356011666
+          isPrivate: false
+          sortKey: -1747355908169
+        method: GET
+        body:
+          mimeType: application/json
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+            id: pair_9da2616e938f46e284f6943a67336e43
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJpYXQiOjE3NDczNTM0MjIsImV4cCI6MTc0NzQzOTgyMn0.O0ToFIAd7X2krepgYHGnNO5CFhLwHoJdF2y1V1Am7AI
+          disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/cart/1?quantity=5
+        name: Add to Cart
+        meta:
+          id: req_d3e3ad6aa4244e4b808486b65e4c32ec
+          created: 1747353573101
+          modified: 1747356030264
+          isPrivate: false
+          sortKey: -1747355908269
+        method: POST
+        body:
+          mimeType: application/json
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+            id: pair_9da2616e938f46e284f6943a67336e43
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJpYXQiOjE3NDczNTM0MjIsImV4cCI6MTc0NzQzOTgyMn0.O0ToFIAd7X2krepgYHGnNO5CFhLwHoJdF2y1V1Am7AI
+          disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/cart
+        name: Get Cart content
+        meta:
+          id: req_abeb220b47494ddb9d9651ef0c2d5b63
+          created: 1747353767323
+          modified: 1747356068368
+          isPrivate: false
+          sortKey: -1747355908369
+        method: GET
+        body:
+          mimeType: application/json
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+            id: pair_9da2616e938f46e284f6943a67336e43
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJpYXQiOjE3NDczNTM0MjIsImV4cCI6MTc0NzQzOTgyMn0.O0ToFIAd7X2krepgYHGnNO5CFhLwHoJdF2y1V1Am7AI
+          disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/products/1
+        name: Delete product
+        meta:
+          id: req_37e12ed4d3cc45a5a599504a8102199e
+          created: 1747353794198
+          modified: 1747356087832
+          isPrivate: false
+          sortKey: -1747355908469
+        method: DELETE
+        body:
+          mimeType: application/json
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+            id: pair_9da2616e938f46e284f6943a67336e43
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJpYXQiOjE3NDczNTM0MjIsImV4cCI6MTc0NzQzOTgyMn0.O0ToFIAd7X2krepgYHGnNO5CFhLwHoJdF2y1V1Am7AI
+          disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/products/2
+        name: Update product
+        meta:
+          id: req_0c74d1e32bff48c8bf24cae21907e881
+          created: 1747356130834
+          modified: 1747356757894
+          isPrivate: false
+          sortKey: -1747355908419
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "code": "656565",
+              "name": "Ordinateur 5454",
+              "description": "MacBook M1",
+              "image": "macbook.jpg",
+              "category": "Informatique",
+              "price": 0.99,
+              "quantity": 10,
+              "internalReference": "REF-MAC-01",
+              "shellId": 1,
+              "inventoryStatus": "INSTOCK",
+              "rating": 5
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+            id: pair_9da2616e938f46e284f6943a67336e43
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJpYXQiOjE3NDczNTM0MjIsImV4cCI6MTc0NzQzOTgyMn0.O0ToFIAd7X2krepgYHGnNO5CFhLwHoJdF2y1V1Am7AI
+          disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1707141528514
+    modified: 1707141797899
+  cookies:
+    - key: YOMe1h3tgHKNQxhV6V7n5g__
+      value: v1KdHOgwSDk4d
+      domain: administration-etrangers-en-france.interieur.gouv.fr
+      path: /
+      hostOnly: true
+      creation: 2024-02-05T14:00:55.424Z
+      lastAccessed: 2024-02-05T14:03:17.899Z
+      id: 54301c80-c8f9-4b2b-b109-78b258ab4c75
+    - key: Authorization
+      value: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDcxNDE3OTcuODQ0Njc5LCJleHAiOjE3MDcxNDQ0OTcuODQ0Njc5LCJsb2dpbiI6Ijk5MTAwODEyMzYiLCJ1cmxfcHJlZml4IjoiL3VzYWdlciIsInR5cGUiOiJhdXRoIiwiZnJlc2giOnRydWUsImZyZXNobmVzc19leHAiOjE3MDcxNDE0NDEuMDI3MDA3LCJ3YXRjaGVyIjoiNTg2MTc2ZWZmOTcyNWY5YzNmNmE4ZWU1Mzk1MTRkOTdlMGE1NTJhMmMzZDRiNzI2MTc1MWQ0NGE1ZjFkNzdjNiIsImNsYWltcyI6eyJrY19mY19mbGFnIjpmYWxzZSwiZnVzaW9uX2ZsYWciOnRydWV9fQ.WbwjyMTvtUHROISFFutJKgtmg3cPvOmc2wDsji6Uyn0
+      domain: administration-etrangers-en-france.interieur.gouv.fr
+      path: /
+      secure: true
+      httpOnly: true
+      hostOnly: true
+      creation: 2024-02-05T14:01:44.034Z
+      lastAccessed: 2024-02-05T14:03:17.899Z
+      id: aae8d713-6136-4b20-a98e-c39fb4cdc28b
+environments:
+  name: Base Environment
+  meta:
+    id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1707141528502
+    modified: 1707141528502
+    isPrivate: false
